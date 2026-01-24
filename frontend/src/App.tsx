@@ -32,6 +32,8 @@ function App() {
         <Server className="icon-main" size={48} />
         <h1>DevOps Assessment</h1>
         <p className="subtitle">Full-stack Hello World Application</p>
+        <h2>Hello from continous Deployment </h2>
+        <button color='blue'>Pune</button>
       </header>
 
       <main className="main-card">
