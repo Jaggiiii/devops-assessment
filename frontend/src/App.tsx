@@ -11,7 +11,6 @@ function App() {
   const fetchData = async () => {
     setLoading(true)
     setError(null)
-    // http://13.60.215.105:8000/api/hello/
     try {
       const response = await axios.get('/api/hello/')
       setMessage(response.data.message)
@@ -33,8 +32,7 @@ function App() {
         <Server className="icon-main" size={48} />
         <h1>DevOps Assessment</h1>
         <p className="subtitle">Full-stack Hello World Application</p>
-        <h2>Hello from continous Deployment </h2>
-        <button color='blue'>Pune</button>
+        <h2> Testing CI CD</h2>
       </header>
       <main className="main-card">
         <div className="status-badge">
