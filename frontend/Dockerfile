@@ -3,9 +3,11 @@ FROM node:22 AS builder
 
 WORKDIR /app
 
+# Install dependencies
 COPY package*.json ./
 RUN npm install
 
+# Copy source and build
 COPY . .
 RUN npm run build
 
@@ -19,12 +21,15 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 # Copy build output
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Fix permissions properly for nginx runtime
+# 🔑 Copy nginx reverse proxy config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Fix permissions for non-root nginx
 RUN mkdir -p /run/nginx \
     && chown -R appuser:appgroup \
         /usr/share/nginx/html \
-        /var/cache/nginx \
         /etc/nginx \
+        /var/cache/nginx \
         /run \
         /run/nginx
 

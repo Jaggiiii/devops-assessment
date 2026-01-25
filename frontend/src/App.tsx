@@ -11,8 +11,9 @@ function App() {
   const fetchData = async () => {
     setLoading(true)
     setError(null)
+    // http://13.60.215.105:8000/api/hello/
     try {
-      const response = await axios.get('http://13.60.215.105:8000/api/hello/')
+      const response = await axios.get('/api/hello/')
       setMessage(response.data.message)
     } catch (err) {
       console.error(err)
@@ -35,7 +36,6 @@ function App() {
         <h2>Hello from continous Deployment </h2>
         <button color='blue'>Pune</button>
       </header>
-
       <main className="main-card">
         <div className="status-badge">
           {loading ? (

@@ -26,3 +26,19 @@ dist-ssr/
 # OS
 .DS_Store
 Thumbs.db
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.tfvars
+
+# AWS CLI
+awscliv2.zip
+aws/
+
+# OS / Editor
+.DS_Store
+.vscode/
+
+
