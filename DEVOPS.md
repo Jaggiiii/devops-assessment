@@ -151,7 +151,7 @@ After Terraform creates the instance, you simply SSH in, install Docker (via `yu
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```text
 ├── backend/                # Django Application
@@ -161,6 +161,7 @@ After Terraform creates the instance, you simply SSH in, install Docker (via `yu
 ├── docker-compose.yml      # Orchestration
 ├── DEVOPS.md               # Documentation
 └── README.md               # General Overview
+```
 
 ##  Final Summary
 
