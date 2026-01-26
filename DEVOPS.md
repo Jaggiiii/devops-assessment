@@ -172,4 +172,4 @@ After Terraform creates the instance, you simply SSH in, install Docker (via `yu
 * **Result:** A fully automated, scalable, and production-ready setup.
 
 ---
-# Maintained by: D Jagadeeswar Rao**
+# Maintained by: D Jagadeeswar Rao
