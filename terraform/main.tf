@@ -7,9 +7,11 @@ terraform {
   }
 }
 
+
 # -------------------------------
 # AWS Provider
 # -------------------------------
+
 provider "aws" {
   region = var.aws_region
 }
@@ -17,6 +19,7 @@ provider "aws" {
 # -------------------------------
 # Security Group
 # -------------------------------
+
 resource "aws_security_group" "web_sg" {
   name        = "devops-assessment-sg"
   description = "Allow SSH, HTTP, HTTPS"
