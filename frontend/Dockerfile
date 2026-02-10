@@ -21,7 +21,7 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 # Copy build output
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# 🔑 Copy nginx reverse proxy config
+#  Copy nginx reverse proxy config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Fix permissions for non-root nginx
